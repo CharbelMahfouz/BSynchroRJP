@@ -65,11 +65,8 @@ public partial class AspNetUser
     [InverseProperty("User")]
     public virtual ICollection<AspNetUserToken> AspNetUserTokens { get; set; } = new List<AspNetUserToken>();
 
-    [InverseProperty("CreatedByUser")]
-    public virtual ICollection<CrmCompany> CrmCompanies { get; set; } = new List<CrmCompany>();
-
     [InverseProperty("User")]
-    public virtual ICollection<ProfPerson> ProfPeople { get; set; } = new List<ProfPerson>();
+    public virtual ICollection<Customer> Customers { get; set; } = new List<Customer>();
 
     [ForeignKey("UserId")]
     [InverseProperty("Users")]
