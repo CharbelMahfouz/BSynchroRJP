@@ -28,11 +28,13 @@ namespace BLL.Utilities.Extensions.ServiceExtensions
 
         public static void ConfigureServices(this IServiceCollection services)
         {
+            services.AddScoped<ValidationFilterAttribute>();
             services.AddScoped<BaseBL>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IAccountsBL, AccountsBL>();
             services.AddScoped<ITransactionsBL, TransactionsBL>();
             services.AddScoped<ICustomersBL, CustomersBL>();
+            services.AddScoped<IDbInitializer, DbInitializer>();
 
         }
     }
