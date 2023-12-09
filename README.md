@@ -26,7 +26,7 @@ This document provides an overview of the structure, design patterns and the end
 
 - **HTTP Method:** POST
 - **Endpoint:** `/api/accounts/openaccount`
-- **Description:** Opens a "current account" for existing customers by providing the customerId and initialCredit .
+- **Description:** Opens a "current account" for existing customers by providing the customerId (please use ids 1 and 3) and initialCredit .
 - **Authentication:** No authentication required for this endpoint.
 
 ## Customers
