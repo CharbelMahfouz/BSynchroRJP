@@ -91,20 +91,7 @@ namespace BLL.Utilities
 
 
 
-        public static string GenerateJWT(List<Claim> claims)
-        {
-            SymmetricSecurityKey secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("fdjfhjehfjhfuehfbhvdbvjjoq8327483rgh"));
-            JwtSecurityToken token = new JwtSecurityToken(
-               issuer: "https://localhost:44310",
-               audience: "https://localhost:44310",
-               claims: claims,
-               notBefore: DateTime.Now,
-               expires: DateTime.Now.AddYears(1),
-               signingCredentials: new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256)
-               );
-            string JwtToken = new JwtSecurityTokenHandler().WriteToken(token);
-            return JwtToken;
-        }
+
 
         public static bool Between(double? number, double? min, double? max)
         {
