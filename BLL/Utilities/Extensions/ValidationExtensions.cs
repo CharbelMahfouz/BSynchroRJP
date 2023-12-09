@@ -1,4 +1,4 @@
-﻿using BLL.ViewModels;
+﻿using BLL.DTOs;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;

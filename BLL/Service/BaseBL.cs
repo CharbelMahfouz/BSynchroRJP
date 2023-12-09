@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using BLL.DTOs;
 using BLL.Utilities;
-using BLL.ViewModels;
 using DAL;
 
 namespace BLL.Service

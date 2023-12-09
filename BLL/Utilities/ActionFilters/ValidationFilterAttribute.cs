@@ -1,5 +1,5 @@
-﻿using BLL.Utilities.Extensions;
-using BLL.ViewModels;
+﻿using BLL.DTOs;
+using BLL.Utilities.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;

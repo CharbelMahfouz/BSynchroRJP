@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BLL.ViewModels
+namespace BLL.DTOs
 {
-    
+
     public partial class ResponseModel
     {
         public int Result { get; set; }
@@ -14,7 +14,7 @@ namespace BLL.ViewModels
 
     }
 
-    
+
     public partial class ValidationError
     {
         public string Field { get; set; }

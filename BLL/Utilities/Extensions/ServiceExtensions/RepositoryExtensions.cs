@@ -1,4 +1,5 @@
 
+using BLL.IServices;
 using BLL.Service;
 using BLL.Utilities.ActionFilters;
 using BLL.Utilities.Mailkit;
@@ -23,12 +24,15 @@ namespace BLL.Utilities.Extensions.ServiceExtensions
             services.AddScoped<IGenericRepos<Transaction>, GenericRepos<Transaction>>();
             services.AddScoped<IGenericRepos<Customer>, GenericRepos<Customer>>();
             services.AddScoped<IGenericRepos<CurrentAccount>, GenericRepos<CurrentAccount>>();
-                  }
+        }
 
         public static void ConfigureServices(this IServiceCollection services)
         {
             services.AddScoped<BaseBL>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IAccountsBL, AccountsBL>();
+            services.AddScoped<ITransactionsBL, TransactionsBL>();
+
         }
     }
 }

@@ -7,8 +7,8 @@ using System.Net;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using BLL.ViewModels;
 using BLL.Utilities.Logging;
+using BLL.DTOs;
 
 namespace BLL.Utilities.CustomMiddleWare
 {
