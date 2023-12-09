@@ -82,20 +82,12 @@ namespace API
             app.UseStaticFiles();
 
             app.UseRouting();
-            _ = SeedDB();
             app.UseAuthentication();
             app.UseAuthorization();
             //logger Custom
             //app.ConfigureCustomApiLoggingMiddleware();
             
-            async Task SeedDB()
-            {
-                using(var scope = app.ApplicationServices.CreateScope())
-                {
-                    var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
-                    await dbInitializer.SeedDatabase();
-                }
-            }
+
 
             app.UseEndpoints(endpoints =>
             {

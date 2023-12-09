@@ -25,8 +25,8 @@ namespace BLL.Service
         public async Task SeedDatabase()
         {
             await CheckRoles();
-            var currUser = await _userManager.FindByEmailAsync("johndoe@gmail.com");
-            if (currUser == null)
+            var currUser1 = await _userManager.FindByEmailAsync("johndoe@gmail.com");
+            if (currUser1 == null)
             {
                 var user = new ApplicationUser()
                 {
@@ -46,6 +46,32 @@ namespace BLL.Service
                     CreatedDate = DateTime.UtcNow,
                     Balance = 0,
                     FirstName = "John",
+                    LastName = "Doe",
+                    UserId = user.Id
+                };
+                await _uow.CustomerRepo.Create(customer);
+            }
+            var currUser2 = await _userManager.FindByEmailAsync("janedoe@gmail.com");
+            if (currUser2 == null)
+            {
+                var user = new ApplicationUser()
+                {
+                    Email = "janedoe@gmail.com",
+                    IsDeleted = false,
+                    EmailConfirmed = true,
+                    UserName = "janedoe@gmail.com",
+                    PhoneNumberConfirmed = true,
+                    CreatedDate = DateTime.UtcNow,
+
+                };
+
+                await _userManager.CreateAsync(user);
+                await _userManager.AddToRoleAsync(user, "User");
+                var customer = new Customer()
+                {
+                    CreatedDate = DateTime.UtcNow,
+                    Balance = 0,
+                    FirstName = "Jane",
                     LastName = "Doe",
                     UserId = user.Id
                 };
