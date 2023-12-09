@@ -63,7 +63,7 @@ namespace API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pawers v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BSynchroRJP"));
             }
             app.ConfigureCustomExceptionMiddleware();
             
@@ -72,8 +72,7 @@ namespace API
             {
                 app.UseSwaggerUI(c =>
                 {
-                    //c.SwaggerEndpoint("/webapi/swagger/v1/swagger.json", "Template v1");
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pawers v1");
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "BSynchroRJP");
                     c.DisplayRequestDuration();
                 });
             }
