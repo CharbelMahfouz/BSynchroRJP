@@ -24,7 +24,7 @@ namespace BLL.Utilities.Extensions.ServiceExtensions
 			services.AddDbContext<ApplicationDbContext>(options =>
 			   options.UseSqlServer(
 				   Configuration.GetConnectionString("DefaultConnection")));
-			services.AddDbContext<ChrisCellDbContext>(options =>
+			services.AddDbContext<BSynchroRJPDbContext>(options =>
 			   options.UseSqlServer(
 				   Configuration.GetConnectionString("DefaultConnection")));
 			services.AddIdentity<ApplicationUser, IdentityRole>(options =>

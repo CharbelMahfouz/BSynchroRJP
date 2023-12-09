@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Data;
 
-public partial class ChrisCellDbContext : DbContext
+public partial class BSynchroRJPDbContext : DbContext
 {
-    public ChrisCellDbContext()
+    public BSynchroRJPDbContext()
     {
     }
 
-    public ChrisCellDbContext(DbContextOptions<ChrisCellDbContext> options)
+    public BSynchroRJPDbContext(DbContextOptions<BSynchroRJPDbContext> options)
         : base(options)
     {
     }

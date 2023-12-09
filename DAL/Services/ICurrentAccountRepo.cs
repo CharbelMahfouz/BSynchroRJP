@@ -4,7 +4,7 @@ using DAL.Models;
 
 namespace DAL.Services
 {
-    public interface IAspNetUserClaimRepo : IGenericRepos<AspNetUserClaim>
+    public interface ICurrentAccountRepo : IGenericRepos<CurrentAccount>
     {
         // Define the repository methods here
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Services
 {
-    public interface IResetPasswordRepo : IGenericRepos<AccResetPasswordDetail>
+    public interface ITransactionRepo : IGenericRepos<Transaction>
     {
     }
 }

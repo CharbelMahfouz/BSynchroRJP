@@ -4,7 +4,7 @@ using DAL.Models;
 
 namespace DAL.Services
 {
-    public interface IGenStockManagementRestockOrderStatusRepo : IGenericRepos<GenStockManagementRestockOrderStatus>
+    public interface ICustomerRepo : IGenericRepos<Customer>
     {
         // Define the repository methods here
     }

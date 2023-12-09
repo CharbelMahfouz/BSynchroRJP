@@ -12,9 +12,9 @@ namespace DAL.Repos
 {
     public class GenericRepos<T> : IGenericRepos<T> where T : class
     {
-        protected readonly ChrisCellDbContext _context;
+        protected readonly BSynchroRJPDbContext _context;
 
-        public GenericRepos(ChrisCellDbContext context)
+        public GenericRepos(BSynchroRJPDbContext context)
         {
             _context = context;
         }

@@ -19,8 +19,11 @@ namespace BLL.Utilities.Extensions.ServiceExtensions
     {
         public static void ConfigureRepositories(this IServiceCollection services)
         {
-            
-        }
+            // inject repo here
+            services.AddScoped<IGenericRepos<Transaction>, GenericRepos<Transaction>>();
+            services.AddScoped<IGenericRepos<Customer>, GenericRepos<Customer>>();
+            services.AddScoped<IGenericRepos<CurrentAccount>, GenericRepos<CurrentAccount>>();
+                  }
 
         public static void ConfigureServices(this IServiceCollection services)
         {
