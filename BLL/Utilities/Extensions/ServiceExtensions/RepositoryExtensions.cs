@@ -32,6 +32,7 @@ namespace BLL.Utilities.Extensions.ServiceExtensions
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IAccountsBL, AccountsBL>();
             services.AddScoped<ITransactionsBL, TransactionsBL>();
+            services.AddScoped<ICustomersBL, CustomersBL>();
 
         }
     }

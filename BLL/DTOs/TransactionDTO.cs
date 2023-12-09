@@ -12,6 +12,6 @@ namespace BLL.DTOs
         public decimal TransactionAmount { get; set; }
         public decimal OldBalance { get; set; }
         public decimal NewBalance { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
     }
 }
