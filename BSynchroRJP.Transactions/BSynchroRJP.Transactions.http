@@ -1,0 +1,6 @@
+@BSynchroRJP.Transactions_HostAddress = http://localhost:5162
+
+GET {{BSynchroRJP.Transactions_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
